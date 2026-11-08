@@ -2,7 +2,7 @@
   <img src="docs/qwenfx-banner.svg" alt="QwenFX: a coding agent, running inside the weights of the model it drives." width="100%">
 </p>
 
-Model: Hugging Face (coming)  
+Model: [Hugging Face](https://huggingface.co/divagr1925/QwenFX)  
 Part of [Qwenputer](https://github.com/divagr18/qwenputer), the computer compiled into Qwen3.5's weights.
 
 **QwenFX runs [fx](https://github.com/vercel-labs/fx), Vercel's coding agent, as its exact compiled
@@ -119,12 +119,12 @@ fresh clone on an L4.
 ```bash
 git clone https://github.com/divagr18/QwenFX && cd QwenFX && uv sync --extra hf
 uv run python qwenfx.py setup        # fx's ELF (sha256 checked), rv32emu, Qwen3.5-4B
-uv run python qwenfx.py chip         # the chip file, built from the Python circuit
+uv run hf download divagr1925/QwenFX fx-live-u13-f4096.safetensors --local-dir chip
 uv run python qwenfx.py task t1_bug  # fx fixes a bug on the chip; the hidden check runs at the end
 ```
 
-`chip` writes `chip/fx-live-u13-f4096.safetensors`. The chip file will also be on Hugging Face;
-until then, build it. `task` runs fx on the chip with Qwen3.5-4B. It prints the result,
+The download is the chip file. `uv run python qwenfx.py chip` builds the same file from the Python
+circuit instead and writes it to the same place. `task` runs fx on the chip with Qwen3.5-4B. It prints the result,
 `"solved": true` and the check's answer, and writes the whole run to `runs/live/`. rv32emu runs
 beside the chip in lockstep, and after the run every chip token is audited against the reference
 machine. `--no-units` runs the circuit without the units. Any `live_chip.py` flag passes through,
