@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use QwenFX, please cite it as below."
+title: "QwenFX: a coding agent running inside the weights of the model it drives"
+authors:
+  - family-names: Agrawal
+    given-names: Divyansh
+    orcid: "https://orcid.org/0009-0003-0739-2473"
+license: MIT
+repository-code: "https://github.com/divagr18/QwenFX"
+type: software
+keywords:
+  - RISC-V
+  - Qwen3.5
+  - compiled transformer
+  - coding agent

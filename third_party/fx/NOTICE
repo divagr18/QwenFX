@@ -1,0 +1,41 @@
+QwenFX ships a RISC-V build of fx, Vercel's coding agent.
+
+fx
+Copyright 2025 Vercel, Inc.
+Licensed under the Apache License, Version 2.0 (LICENSE in this directory).
+Source: https://github.com/vercel-labs/fx, commit 757bdb9685bd0e1ead3b82a8fe3ab42e43e74a21
+(version string 0.0.16). fx's own third-party notices are in THIRD_PARTY_NOTICES.md, copied
+unchanged from that commit.
+
+Files in this directory derived from fx:
+
+- fx-fastcopy.elf.xz: an RV32IM+Zba ELF of fx's headless core (xz-compressed; the ELF's sha256 is
+  282e53d497aa113173bc3ad9aa2ab221b6f43e43360457a093aeda7c1a85cbbd). It is fx's own source,
+  unchanged: the 717 tracked files under src/, build.zig and build.zig.zon equal commit 757bdb9
+  (fx/check_src.sh). It was built by the route in fx/zbuild and fx/rv of this repository:
+    1. zig build in fx/zbuild (Zig 0.17.0) builds fx's wasm core with fx's module graph and build
+       options, rooted at fx/zbuild/rv_tools_main.zig. That root is ours: it imports fx's
+       wasm_core_main.zig unchanged and adds one export that runs fx's own read, edit and write
+       tool code inside the guest. It is copied into fx's src/ for the build and removed after.
+    2. Zig's lib directory is patched with fx/zbuild/zig-lib-wasi-platform.patch (WASI stat
+       reports 0644 / 0755; setPermissions is a no-op on WASI). This is the platform's libc and
+       std, not fx.
+    3. wasm2c (wabt 1.0.42) translates the wasm module to C; fx/rv/build.py splits, patches the
+       memory access macros (no bounds checks, linear memory at address 0, alignment-honouring
+       accesses) and compiles it with zig cc for riscv32 at -O2, with our bare-metal runtime
+       fx/rv/rt.c and the import stubs fx/rv/gen_imports.py writes. Every wasm import becomes an
+       ecall into the host.
+  The ELF therefore also contains compiled code from Zig's standard library, compiler-rt and
+  wasi-libc (as shipped with Zig 0.17.0), and wabt's wasm2c runtime headers (Apache-2.0).
+- imports.json: the ELF's import table (names and signatures of fx's wasm imports), written by
+  fx/rv/gen_imports.py from the wasm2c header.
+
+Other fx-derived data in this repository, under the same terms:
+
+- fx/circ/signatures.json and tests/data/rv/fx_units.json: words of fx's compiled code, used to find
+  the hot-code units' entry points in the ELF and to test them.
+- tests/data/fx/t1_bug.fxio: a recorded fx session (fx's requests and the model's replies).
+- Chip files written by fx/fxio/live_chip.py --write-chip-file carry fx's boot image (code and data)
+  in their state.
+
+Everything else in this repository is MIT-licensed (LICENSE at the repository root).

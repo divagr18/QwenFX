@@ -1,0 +1,644 @@
+[
+ {
+  "id": 0,
+  "module": "fx",
+  "name": "fx_attachment_put",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 1,
+  "module": "fx",
+  "name": "fx_attachment_size",
+  "ret": "u32",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 2,
+  "module": "fx",
+  "name": "fx_attachment_take",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 3,
+  "module": "fx",
+  "name": "fx_host_tool_call",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 4,
+  "module": "fx",
+  "name": "fx_host_tool_result_read",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 5,
+  "module": "fx",
+  "name": "fx_host_tool_result_release",
+  "ret": "void",
+  "params": []
+ },
+ {
+  "id": 6,
+  "module": "fx",
+  "name": "fx_http_request",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 7,
+  "module": "fx",
+  "name": "fx_http_stream_close",
+  "ret": "void",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 8,
+  "module": "fx",
+  "name": "fx_http_stream_next",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 9,
+  "module": "fx",
+  "name": "fx_http_stream_open",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 10,
+  "module": "fx",
+  "name": "fx_http_stream_retry_after",
+  "ret": "u32",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 11,
+  "module": "fx",
+  "name": "fx_http_stream_status",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 12,
+  "module": "fx",
+  "name": "fx_journal_flush",
+  "ret": "u32",
+  "params": []
+ },
+ {
+  "id": 13,
+  "module": "fx",
+  "name": "fx_oauth_session_commit",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 14,
+  "module": "fx",
+  "name": "fx_oauth_session_load",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 15,
+  "module": "fx",
+  "name": "fx_oauth_session_remove",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 16,
+  "module": "fx",
+  "name": "fx_session_commit",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 17,
+  "module": "fx",
+  "name": "fx_session_list",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 18,
+  "module": "fx",
+  "name": "fx_session_load",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 19,
+  "module": "fx",
+  "name": "fx_session_remove",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 20,
+  "module": "fx",
+  "name": "fx_steering_close",
+  "ret": "void",
+  "params": []
+ },
+ {
+  "id": 21,
+  "module": "fx",
+  "name": "fx_steering_state",
+  "ret": "u32",
+  "params": []
+ },
+ {
+  "id": 22,
+  "module": "fx",
+  "name": "fx_steering_take",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 23,
+  "module": "wasi_snapshot_preview1",
+  "name": "args_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 24,
+  "module": "wasi_snapshot_preview1",
+  "name": "args_sizes_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 25,
+  "module": "wasi_snapshot_preview1",
+  "name": "clock_res_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 26,
+  "module": "wasi_snapshot_preview1",
+  "name": "clock_time_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 27,
+  "module": "wasi_snapshot_preview1",
+  "name": "environ_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 28,
+  "module": "wasi_snapshot_preview1",
+  "name": "environ_sizes_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 29,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_close",
+  "ret": "u32",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 30,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_fdstat_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 31,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_filestat_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 32,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_filestat_set_size",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u64"
+  ]
+ },
+ {
+  "id": 33,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_filestat_set_times",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u64",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 34,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_pread",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 35,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_prestat_dir_name",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 36,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_prestat_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 37,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_pwrite",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 38,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_read",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 39,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_readdir",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 40,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_seek",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u64",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 41,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_sync",
+  "ret": "u32",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 42,
+  "module": "wasi_snapshot_preview1",
+  "name": "fd_write",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 43,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_create_directory",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 44,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_filestat_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 45,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_filestat_set_times",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u64",
+   "u64",
+   "u32"
+  ]
+ },
+ {
+  "id": 46,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_link",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 47,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_open",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u64",
+   "u64",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 48,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_readlink",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 49,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_remove_directory",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 50,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_rename",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 51,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_symlink",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 52,
+  "module": "wasi_snapshot_preview1",
+  "name": "path_unlink_file",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 53,
+  "module": "wasi_snapshot_preview1",
+  "name": "poll_oneoff",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32",
+   "u32",
+   "u32"
+  ]
+ },
+ {
+  "id": 54,
+  "module": "wasi_snapshot_preview1",
+  "name": "proc_exit",
+  "ret": "void",
+  "params": [
+   "u32"
+  ]
+ },
+ {
+  "id": 55,
+  "module": "wasi_snapshot_preview1",
+  "name": "random_get",
+  "ret": "u32",
+  "params": [
+   "u32",
+   "u32"
+  ]
+ }
+]

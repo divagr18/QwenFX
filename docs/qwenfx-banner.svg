@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
+<title id="title">QwenFX</title>
+<desc id="desc">QwenFX: a coding agent, running inside the weights of the model it drives. fx, Vercel's coding agent, runs as its exact RV32 binary on the CPU compiled into Qwen3.5-4B, with that Qwen as its model: a stream of chip tokens, a one-line fix, and the pull requests it opened.</desc>
+<defs><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#f0eee8"/></pattern></defs>
+<rect width="1600" height="500" fill="#fbfaf7"/><rect width="1600" height="500" fill="url(#grid)"/>
+<g font-family="Arial, Helvetica, sans-serif"><text x="88" y="200" font-size="150" fill="#1b1b1b" letter-spacing="-4">Qwen<tspan fill="#6d4ad6">FX</tspan></text><text x="94" y="272" font-size="40" fill="#3f3f3b">A coding agent, running inside</text><text x="94" y="326" font-size="40" fill="#3f3f3b">the weights of the model it drives.</text><text x="94" y="404" font-size="22" fill="#8f8f8a">fx’s exact RV32 binary, with Qwen3.5-4B as its model.</text></g>
+<text x="900" y="62" font-family="Consolas, Menlo, monospace" font-size="17" fill="#3f3f3b">chip tokens · fx’s code, running in the weights</text>
+<rect x="900" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.71"/>
+<rect x="926" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="952" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.29"/>
+<rect x="978" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.55"/>
+<rect x="1004" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1030" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1056" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.34"/>
+<rect x="1082" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.91"/>
+<rect x="1108" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.93"/>
+<rect x="1134" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1160" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.35"/>
+<rect x="1186" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1212" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.38"/>
+<rect x="1238" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.51"/>
+<rect x="1264" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.29"/>
+<rect x="1290" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.55"/>
+<rect x="1316" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.57"/>
+<rect x="1342" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.74"/>
+<rect x="1368" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.62"/>
+<rect x="1394" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.45"/>
+<rect x="1420" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.54"/>
+<rect x="1446" y="84" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.59"/>
+<rect x="1472" y="84" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1498" y="84" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.65"/>
+<rect x="900" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.74"/>
+<rect x="926" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.57"/>
+<rect x="952" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.58"/>
+<rect x="978" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.74"/>
+<rect x="1004" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.83"/>
+<rect x="1030" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.72"/>
+<rect x="1056" y="112" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1082" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.33"/>
+<rect x="1108" y="112" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1134" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.42"/>
+<rect x="1160" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.31"/>
+<rect x="1186" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.87"/>
+<rect x="1212" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.44"/>
+<rect x="1238" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.87"/>
+<rect x="1264" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.37"/>
+<rect x="1290" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.59"/>
+<rect x="1316" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.25"/>
+<rect x="1342" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.65"/>
+<rect x="1368" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.61"/>
+<rect x="1394" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.29"/>
+<rect x="1420" y="112" width="22" height="22" rx="4" fill="#d9534f" fill-opacity="0.86"/>
+<rect x="1446" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.53"/>
+<rect x="1472" y="112" width="22" height="22" rx="4" fill="#e7ecf3"/>
+<rect x="1498" y="112" width="22" height="22" rx="4" fill="#6d4ad6" fill-opacity="0.30"/>
+<rect x="900" y="170" width="620" height="150" rx="10" fill="#ffffff" stroke="#e7ecf3" stroke-width="2"/>
+<text x="920" y="202" font-family="Consolas, Menlo, monospace" font-size="17" fill="#8f8f8a">inventory/money.py</text>
+<text x="920" y="232" font-family="Consolas, Menlo, monospace" font-size="18" fill="#8f8f8a"> </text><text x="942" y="232" font-family="Consolas, Menlo, monospace" font-size="18" fill="#3f3f3b" xml:space="preserve">    s = 0</text>
+<rect x="912" y="239" width="596" height="23" rx="3" fill="#d9534f" fill-opacity="0.12"/>
+<text x="920" y="256" font-family="Consolas, Menlo, monospace" font-size="18" fill="#d9534f">-</text><text x="942" y="256" font-family="Consolas, Menlo, monospace" font-size="18" fill="#3f3f3b" xml:space="preserve">    for i in range(len(prices) - 1):</text>
+<rect x="912" y="263" width="596" height="23" rx="3" fill="#6d4ad6" fill-opacity="0.12"/>
+<text x="920" y="280" font-family="Consolas, Menlo, monospace" font-size="18" fill="#6d4ad6">+</text><text x="942" y="280" font-family="Consolas, Menlo, monospace" font-size="18" fill="#3f3f3b" xml:space="preserve">    for i in range(len(prices)):</text>
+<text x="920" y="304" font-family="Consolas, Menlo, monospace" font-size="18" fill="#8f8f8a"> </text><text x="942" y="304" font-family="Consolas, Menlo, monospace" font-size="18" fill="#3f3f3b" xml:space="preserve">        s += prices[i]</text>
+<text x="900" y="362" font-family="Consolas, Menlo, monospace" font-size="17" fill="#3f3f3b">open_pull_request → pull requests fx opened</text>
+<rect x="900" y="378" width="112" height="44" rx="22" fill="#6d4ad6" fill-opacity="0.10" stroke="#6d4ad6" stroke-width="2"/>
+<circle cx="926" cy="400" r="7" fill="none" stroke="#6d4ad6" stroke-width="2.5"/>
+<text x="944" y="407" font-family="Consolas, Menlo, monospace" font-size="20" fill="#1b1b1b">#6</text>
+<rect x="1024" y="378" width="112" height="44" rx="22" fill="#6d4ad6" fill-opacity="0.10" stroke="#6d4ad6" stroke-width="2"/>
+<circle cx="1050" cy="400" r="7" fill="none" stroke="#6d4ad6" stroke-width="2.5"/>
+<text x="1068" y="407" font-family="Consolas, Menlo, monospace" font-size="20" fill="#1b1b1b">#7</text>
+<rect x="1148" y="378" width="112" height="44" rx="22" fill="#6d4ad6" fill-opacity="0.10" stroke="#6d4ad6" stroke-width="2"/>
+<circle cx="1174" cy="400" r="7" fill="none" stroke="#6d4ad6" stroke-width="2.5"/>
+<text x="1192" y="407" font-family="Consolas, Menlo, monospace" font-size="20" fill="#1b1b1b">#8</text>
+<rect x="1272" y="378" width="112" height="44" rx="22" fill="#6d4ad6" fill-opacity="0.10" stroke="#6d4ad6" stroke-width="2"/>
+<circle cx="1298" cy="400" r="7" fill="none" stroke="#6d4ad6" stroke-width="2.5"/>
+<text x="1316" y="407" font-family="Consolas, Menlo, monospace" font-size="20" fill="#1b1b1b">#9</text>
+<rect x="1396" y="378" width="112" height="44" rx="22" fill="#6d4ad6" fill-opacity="0.10" stroke="#6d4ad6" stroke-width="2"/>
+<circle cx="1422" cy="400" r="7" fill="none" stroke="#6d4ad6" stroke-width="2.5"/>
+<text x="1440" y="407" font-family="Consolas, Menlo, monospace" font-size="20" fill="#1b1b1b">#10</text>
+<text x="900" y="460" font-family="Consolas, Menlo, monospace" font-size="15" fill="#8f8f8a">15 of 15 tasks solved · 0 wrong chip tokens</text>
+</svg>
