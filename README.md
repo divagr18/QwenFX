@@ -2,7 +2,7 @@
   <img src="docs/qwenfx-banner.svg" alt="QwenFX: a coding agent, running inside the weights of the model it drives." width="100%">
 </p>
 
-Model: [Hugging Face](https://huggingface.co/divagr1925/QwenFX)  
+Model: [Hugging Face](https://huggingface.co/divagr1925/QwenFX) · [ModelScope](https://www.modelscope.ai/models/Spartan1925/QwenFX)  
 Part of [Qwenputer](https://github.com/divagr18/qwenputer), the computer compiled into Qwen3.5's weights.
 
 **QwenFX runs [fx](https://github.com/vercel-labs/fx), Vercel's coding agent, as its exact compiled
