@@ -82,7 +82,11 @@ measure a failure rate.
   environment), Qwen's state snapshots, the git and GitHub mechanics of the pull request, and
   the footer the host adds to each PR body.
 - **Two weight sets, one process.** The chip and Qwen are two sets of weights on one GPU, not one
-  merged checkpoint. A merged fx checkpoint would be about 35 GB (estimated) and was not built.
+  merged checkpoint. A merged checkpoint is very possible: the chip is built from Qwen3.5's own
+  layer types, and Qwenputer already ships the CPU merged into Qwen's weights. But at fx's size it
+  would be about 25-37 GB (estimated, depending on how it is stored), most of it zero padding,
+  against 8.5 GB for base Qwen plus the 125 MB chip file. So I chose this layout. Qwen's weights
+  stay byte for byte the base model's.
 - **Boot.** fx's boot ran on rv32emu, a C emulator, to make the snapshot every run starts from.
   A separate run from reset proved boot on the chip: fx's recorded session with no snapshot,
   11.4M tokens, 0 wrong.
@@ -112,7 +116,7 @@ All measured on one NVIDIA L4 unless marked. Raw numbers are in `docs/fx/*.json`
 
 ## Quickstart
 
-One Linux machine with one 24 GB NVIDIA GPU (L4 or A10G), `gcc`, `git` and
+One Linux machine with one 24 GB NVIDIA GPU (checked on an L4), `gcc`, `git` and
 [uv](https://docs.astral.sh/uv/). Qwen3.5-4B takes 8.4 GB of disk. This path was checked from a
 fresh clone on an L4.
 
