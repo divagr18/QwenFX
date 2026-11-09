@@ -8,17 +8,24 @@ Part of [Qwenputer](https://github.com/divagr18/qwenputer), the computer compile
 **QwenFX runs [fx](https://github.com/vercel-labs/fx), Vercel's coding agent, as its exact compiled
 binary on the RISC-V CPU compiled into Qwen3.5-4B's weights, with that same Qwen as its model.
 fx's own code runs on the CPU, token by token, and calls Qwen for every step. It solved 15 of 15
-small coding tasks, each checked by a hidden test, and it opened five pull requests on GitHub
+small coding tasks, each checked by a hidden test, and it opened six pull requests on GitHub
 by itself: [#6](https://github.com/divagr18/fxputer-sandbox/pull/6),
 [#7](https://github.com/divagr18/fxputer-sandbox/pull/7),
 [#8](https://github.com/divagr18/fxputer-sandbox/pull/8),
-[#9](https://github.com/divagr18/fxputer-sandbox/pull/9) and
-[#10](https://github.com/divagr18/fxputer-sandbox/pull/10). Every chip token in every run was
+[#9](https://github.com/divagr18/fxputer-sandbox/pull/9),
+[#10](https://github.com/divagr18/fxputer-sandbox/pull/10) and
+[#12](https://github.com/divagr18/fxputer-sandbox/pull/12). Every chip token in every run was
 checked against a reference machine. None was wrong.**
 
 fx is an RV32IM+Zba ELF, 75.6 MB with symbols and 7 MB of code, built from fx's unmodified
 source. The CPU it runs on is not learned: a compiler computes every weight. Qwen3.5-4B is base
 Qwen, with its own weights.
+
+<p align="center"><img src="docs/qwenfx-demo.gif" alt="fx working on issue #11 on the CPU in the weights: its own code in the trace table, its memory, the calls to Qwen3.5-4B, the diff, and the pull request it opened." width="100%"></p>
+
+fx fixing [issue #11](https://github.com/divagr18/fxputer-sandbox/issues/11) and opening
+[#12](https://github.com/divagr18/fxputer-sandbox/pull/12): cuts from one recorded run, each played
+at real speed. The full run took 6.8 minutes: 7.9M chip tokens, 0 wrong.
 
 ## What it does
 
@@ -33,15 +40,17 @@ store into a branch and a pull request.
 | [#3](https://github.com/divagr18/fxputer-sandbox/issues/3) slugify | [#8](https://github.com/divagr18/fxputer-sandbox/pull/8) | yes | Add slugify(text) function to inventory/text.py |
 | [#4](https://github.com/divagr18/fxputer-sandbox/issues/4) low stock 10 | [#9](https://github.com/divagr18/fxputer-sandbox/pull/9) | yes | Fix low stock threshold: fewer than 10 units (not 5) |
 | [#5](https://github.com/divagr18/fxputer-sandbox/issues/5) parse_line whitespace | [#10](https://github.com/divagr18/fxputer-sandbox/pull/10) | yes | Fix parse_line to trim surrounding whitespace on names |
+| [#11](https://github.com/divagr18/fxputer-sandbox/issues/11) fmt() negative amounts | [#12](https://github.com/divagr18/fxputer-sandbox/pull/12) | yes | Fix fmt() formatting of negative amounts in inventory/money.py |
 
-The tasks are P0c's: five bugs and features in a 10-file Python library, each with a hidden
-check fx never sees. On the chip, with real Qwen3.5-4B:
+Issues #1-#5 are P0c's tasks: five bugs and features in a 10-file Python library, each with a
+hidden check fx never sees. #11 is one more bug in the same library, written for the demo above
+and run with the 13 units on; #6-#10 ran without them. On the chip, with real Qwen3.5-4B:
 
 - **15 of 15 solved** without units (5 tasks, 3 reps), and two two-turn runs.
 - **15 of 15 solved** with the 13 hot-code units on, and **5 of 5** with Qwen's text going
   through the chip's text bridge.
 - **One long session**: all five tasks as five turns of one fx session, solved, 15 steps.
-- **5 of 5 pull requests**, one per issue, each passing its task's hidden check as GitHub serves
+- **6 of 6 pull requests**, one per issue, each passing its task's hidden check as GitHub serves
   the branch.
 
 Three runs per task, and one per issue, on tiny tasks: they show the path works. They do not
@@ -174,7 +183,7 @@ found 0 wrong tokens in 5.15M.
 
 - **0 wrong chip tokens.** After every run, the whole token stream goes through the reference
   machine (`PagedMachine`). Over the 17 live runs without units: 149.7M chip tokens, 0 wrong.
-  The 15 runs with units: 89.4M, 0 wrong. The 5 pull-request runs: 65.7M, 0 wrong.
+  The 15 runs with units: 89.4M, 0 wrong. The 6 pull-request runs: 73.6M, 0 wrong.
 - **Lockstep emulators.** rv32emu runs beside the chip on the same model replies. At every
   `ecall` the PC, all 31 registers and the instruction count must match, and every request body
   must match byte for byte. At the end, the host I/O hash chain, the final repository and every
